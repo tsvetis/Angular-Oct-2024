@@ -1,0 +1,22 @@
+.nav-bar {
+  width: 100%;
+  height: 30px;
+  padding: 10px;
+  background-color: skyblue;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-btn {
+  margin-left: 10px;
+  padding: 10px;
+  border: 1px solid #000;
+}
+
+.nav-btn:hover {
+  cursor: pointer;
+  background-color: grey;
+  color: #fff;
+}

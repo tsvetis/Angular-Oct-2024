@@ -1,0 +1,24 @@
+<div [class]="randomMsg">This is random message!</div>
+
+<div class="wrapper">
+  <button
+    (click)="togleModal($event)"
+    [style.border]="isShownProp ? '2px solid green' : '1px solid red'"
+  >
+    Toggle Modal
+  </button>
+</div>
+
+<div id="numbers-wrapper">
+  @for (n of numbers; track $index) {
+  <div
+    [class.red]="n % 2 === 0"
+    [class.white]="n % 2 !== 0"
+    [class.border-black]="isShownProp"
+  >
+    {{ n }}
+  </div>
+  }
+</div>
+
+<app-popup [isShown]="isShownProp" (onChildEvent)="onOutputActivate($event)" />

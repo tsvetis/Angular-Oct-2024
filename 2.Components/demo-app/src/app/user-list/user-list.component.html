@@ -1,0 +1,8 @@
+<div id="wrapper">
+  <h3>My users list:</h3>
+  <ul>
+    @for (item of users; track $index) {
+    <app-user-item [userProp]="item" />
+    }
+  </ul>
+</div>
