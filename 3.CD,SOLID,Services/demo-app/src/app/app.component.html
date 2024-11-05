@@ -1,0 +1,14 @@
+<div>
+  <h1>Hello, Angular! {{ title }}</h1>
+  <button (click)="handleClick()">Click</button>
+
+  @if (isLoading) {
+  <h3>Loading....</h3>
+  }@else {
+  <app-user-list [users]="users" />
+  }
+
+  <!-- <input type="text" placeholder="name" #inputName />
+  <input type="number" placeholder="age" #inputAge />
+  <button (click)="addSimpleUser(inputName, inputAge)">Add User</button> -->
+</div>
