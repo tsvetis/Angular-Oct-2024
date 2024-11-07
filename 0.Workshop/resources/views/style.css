@@ -1,0 +1,284 @@
+@import url('reset.css');
+@import url('layout.css');
+@import url('typography.css');
+@import url('responsive.css');
+
+body {
+    max-width: 1366px;
+    margin: auto;
+    position: relative;
+    min-height: 100vh;
+    font-optical-sizing: auto;
+    background-color: #e4e3e3;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    padding-bottom: 4.5em;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+h2 {
+    text-align: center;
+    border-bottom: 1px dashed #999;
+}
+
+span {
+    font-weight: bold;
+}
+
+button {
+    background-color: #4ebced;
+    color: white;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+/* header  */
+
+header {
+    background:#234465 
+}
+
+header ul {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+    margin: auto;
+}
+
+header ul span {
+    color: white;
+    padding: 0.5em;
+}
+
+
+
+header li {
+    list-style: none;
+    margin: .35em;
+    padding: 0 .95em;
+    background-color: #ff9f00;
+    width: 15vw;
+    text-align: center;
+    border-radius: 20px;
+    text-shadow: 1px 1px rgb(87, 86, 86);
+}
+
+header li:hover {
+    scale: 1.1;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+.logo {
+    font-size: 2em;
+    color: white;
+    padding-bottom: 0;
+    text-align: center;
+}
+
+.logo-wrap {
+display: flex;
+align-items: center;
+justify-content: center;
+    margin: 0.5em 0;
+}
+
+.logo-wrap > img {
+    height: 15vh;
+    margin-right: 3vw;
+    margin-left: -4vw;
+}
+
+.mini-navbar-wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
+
+/* mini-navbar */
+
+.mini-navbar ul {
+  margin-bottom: 60px;
+  margin-right: -50px;
+}
+
+.mini-navbar ul li {
+    background-color: #ff9f00;
+    width: 15vw;
+    text-align: center;
+    padding: 5px;
+    border-radius: 20px;
+    text-shadow: 1px 1px rgb(95, 94, 94);
+}
+.mini-navbar ul li:hover{
+    scale: 1.1;
+    
+}
+/* main  */
+
+main {
+    width: 50%;
+}
+
+/* theme list item */
+
+.theme-container a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.theme-container span {
+    font-weight: bold;
+}
+
+.theme-container h2, p {
+    padding: 0.3em 0 0.2em;
+    margin: 0;
+}
+.theme-container h2 {
+    padding: 0.3em 0 0.2em;
+    margin: 0;
+    background-color: #234465;
+    color: white;
+    text-shadow: 1px 1px rgb(121, 117, 117);
+    border-radius: 10px;
+}
+.theme-name-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.3em 0.5em;
+    border: 1px solid #999;
+    border-radius: 0.3em;
+    font-size: 0.8em;
+    margin-top: 1em;
+    background-color: #ff9d00d7;
+    
+}
+
+.theme-title {
+    padding: 0;
+}
+
+.theme-name {
+    width: 100%;
+
+}
+
+.columns {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.7rem;
+    color: white;
+    text-shadow: 1px 1px rgb(0, 0, 0);
+}
+
+.subscribers {
+    text-align: right;
+    flex-basis: 25%;
+}
+
+.subscribers button {
+    padding: 0.2rem 0.5rem;
+    border: none;
+    border-radius: 0.3rem;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+}
+
+.subscribe {
+    background-color: green;
+}
+
+.unsubscribe {
+    background-color: red;
+}
+
+time {
+    font-weight: bold;
+}
+
+/* aside  */
+
+aside {
+    width: 29%;
+    margin-top: 1em;
+    font-size: 0.8em;
+}
+
+.aside * {
+    margin: 0;
+    padding: 0;
+}
+
+.aside>div {
+    border: 1px solid #999;
+    border-radius: 0.3em;
+    padding: 0.3em 0.5em;
+}
+
+.title {
+    font-size: 1.5em;
+    border-bottom: none;
+}
+
+.aside .aside-theme {
+    margin: 1rem 0;
+    padding: 0.5rem 0;
+}
+
+.aside h3 {
+    border-bottom: none;
+    border-radius: 0.3rem;
+    font-size: 1.2rem;
+    background-color:#306085;
+    padding-left: 0.5rem;
+    color: white;
+    text-shadow: 1px 1px rgb(43, 42, 42);
+}
+
+.aside-theme+.aside-theme {
+    border-top: dashed 1px #999;
+}
+
+.aside-theme p {
+    text-align: right;
+}
+
+.aside-theme a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* footer  */
+
+footer {
+display: flex;
+align-items: center;
+justify-content: space-evenly;
+background-color:#234465;
+height: 8vh;
+color: white;
+text-shadow: 1px 1px black;
+text-align: center;
+}
+

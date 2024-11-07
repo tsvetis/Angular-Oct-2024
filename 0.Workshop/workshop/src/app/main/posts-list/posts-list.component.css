@@ -1,0 +1,49 @@
+aside {
+  width: 100%;
+  margin-top: 1em;
+  font-size: 0.8em;
+}
+
+.aside * {
+  margin: 0;
+  padding: 0;
+}
+
+.aside > div {
+  border: 1px solid #999;
+  border-radius: 0.3em;
+  padding: 0.3em 0.5em;
+}
+
+.title {
+  font-size: 1.5em;
+  border-bottom: none;
+}
+
+.aside .aside-theme {
+  margin: 1rem 0;
+  padding: 0.5rem 0;
+}
+
+.aside h3 {
+  border-bottom: none;
+  border-radius: 0.3rem;
+  font-size: 1.2rem;
+  background-color: #306085;
+  padding-left: 0.5rem;
+  color: white;
+  text-shadow: 1px 1px rgb(43, 42, 42);
+}
+
+.aside-theme + .aside-theme {
+  border-top: dashed 1px #999;
+}
+
+.aside-theme p {
+  text-align: right;
+}
+
+.aside-theme a {
+  text-decoration: none;
+  color: inherit;
+}

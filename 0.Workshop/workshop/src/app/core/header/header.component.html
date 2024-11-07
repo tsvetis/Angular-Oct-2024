@@ -1,0 +1,34 @@
+<header>
+  <div class="mini-navbar-wrap">
+    <div class="logo-wrap">
+      <img src="logo.png" />
+      <p class="logo">SoftUni Forum</p>
+    </div>
+
+    @if(!isLoggedIn) {
+    <div class="mini-navbar">
+      <ul>
+        <li>
+          <a href="#">Login</a>
+        </li>
+        <li>
+          <a href="#">Register</a>
+        </li>
+      </ul>
+    </div>
+    }
+  </div>
+  <nav>
+    <ul>
+      <li>
+        <a href="#">Home</a>
+      </li>
+      <li>
+        <a href="#">Themes</a>
+      </li>
+      <li>
+        <a href="#">New Theme</a>
+      </li>
+    </ul>
+  </nav>
+</header>

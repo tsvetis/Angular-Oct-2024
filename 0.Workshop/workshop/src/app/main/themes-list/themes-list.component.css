@@ -1,0 +1,77 @@
+/* theme list item */
+
+.theme-container a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.theme-container span {
+  font-weight: bold;
+}
+
+.theme-container h2,
+p {
+  padding: 0.3em 0 0.2em;
+  margin: 0;
+}
+.theme-container h2 {
+  padding: 0.3em 0 0.2em;
+  margin: 0;
+  background-color: #234465;
+  color: white;
+  text-shadow: 1px 1px rgb(121, 117, 117);
+  border-radius: 10px;
+}
+.theme-name-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.3em 0.5em;
+  border: 1px solid #999;
+  border-radius: 0.3em;
+  font-size: 0.8em;
+  margin-top: 1em;
+  background-color: #ff9d00d7;
+}
+
+.theme-title {
+  padding: 0;
+}
+
+.theme-name {
+  width: 100%;
+}
+
+.columns {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.7rem;
+  color: white;
+  text-shadow: 1px 1px rgb(0, 0, 0);
+}
+
+.subscribers {
+  text-align: right;
+  flex-basis: 25%;
+}
+
+.subscribers button {
+  padding: 0.2rem 0.5rem;
+  border: none;
+  border-radius: 0.3rem;
+  color: white;
+  cursor: pointer;
+  width: 100%;
+}
+
+.subscribe {
+  background-color: green;
+}
+
+.unsubscribe {
+  background-color: red;
+}
+
+time {
+  font-weight: bold;
+}

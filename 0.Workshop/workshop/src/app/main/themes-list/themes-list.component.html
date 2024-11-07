@@ -1,0 +1,37 @@
+<main>
+  @if (isLoading) {
+  <app-loader />
+  }@else {
+  <div class="theme-title">
+    @for (theme of themes; track $index) {
+    <div class="theme-container">
+      <div class="theme-name-wrapper">
+        <div class="theme-name">
+          <a href="#" class="normal">
+            <h2>{{ theme.themeName }}</h2>
+          </a>
+          <div class="columns">
+            <div>
+              <p>
+                Date: <time>{{ theme.created_at }}</time>
+              </p>
+              <div class="nick-name">
+                <p>
+                  Username: <span>{{ theme.userId.username }}</span>
+                </p>
+              </div>
+            </div>
+            <div class="subscribers">
+              <!-- <button class="subscribe">Subscribe</button> -->
+              <p>
+                Subscribers: <span>{{ theme?.subscribers?.length || 0 }}</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    }
+  </div>
+  }
+</main>
