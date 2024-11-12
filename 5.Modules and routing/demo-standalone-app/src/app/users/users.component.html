@@ -1,0 +1,15 @@
+<h3>Users List:</h3>
+<div>
+  <ul>
+    @for (user of users; track $index) {
+    <!--  The tempalte way Demo-->
+    <li
+      [routerLink]="['/users', 'details', user.id]"
+      [queryParams]="{ search: 'Test' }"
+    >
+      <!-- <li (click)="loadUser(user.id)" > -->
+      id: {{ user.id }}; name: {{ user.name }}
+    </li>
+    }
+  </ul>
+</div>
