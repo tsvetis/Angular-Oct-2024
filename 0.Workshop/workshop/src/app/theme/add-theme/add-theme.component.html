@@ -1,0 +1,38 @@
+<!-- homepage -->
+<div class="container">
+  <div class="new-theme-border">
+    <div class="header-background">
+      <span>New Theme</span>
+    </div>
+    <form>
+      <div class="new-theme-title">
+        <label for="themeName">Title <span class="red">*</span></label>
+        <input type="text" name="themeName" id="themeName" #inputThemeName />
+        <!-- <p class="error">Theme name is required.</p>
+        <p class="error">Theme name must be at least 5 characters long.</p> -->
+      </div>
+      <div class="new-theme-content">
+        <label for="postText">Post <span class="red">*</span></label>
+        <textarea
+          type="text"
+          name="postText"
+          id="postText"
+          rows="8"
+          class="height"
+          #inputPostText
+        ></textarea>
+        <!-- <p class="error">The field with your post is required.</p>
+        <p class="error">Post must be at least 10 characters long.</p> -->
+      </div>
+      <div class="new-theme-buttons">
+        <button class="cancel">Cancel</button>
+        <button
+          class="public"
+          (click)="addTheme($event, inputThemeName.value, inputPostText.value)"
+        >
+          Post
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

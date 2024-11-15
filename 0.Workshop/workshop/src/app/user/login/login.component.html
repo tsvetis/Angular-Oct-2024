@@ -1,0 +1,54 @@
+<!-- homepage -->
+<div class="container">
+  <form class="login" action="" method="post">
+    <fieldset>
+      <h2>Login Form</h2>
+
+      <p class="field field-icon">
+        <label for="email"
+          ><span><i class="fas fa-envelope"></i></span
+        ></label>
+        <input
+          class="input-error"
+          type="email"
+          name="email"
+          id="email"
+          placeholder="john.doe@gmail.com"
+          #inputEmail
+        />
+      </p>
+      <!-- <p class="error">Email is required!</p> -->
+      <!-- <p class="error">
+                Email is not valid!
+            </p> -->
+
+      <p class="field field-icon">
+        <label for="password"
+          ><span><i class="fas fa-lock"></i></span
+        ></label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="******"
+          #inputPassword
+        />
+      </p>
+      <!-- <p class="error">
+                Password is required!
+            </p>
+            <p class="error">
+                Password must be at least 4 characters!
+            </p> -->
+
+      <button (click)="login($event, inputEmail.value, inputPassword.value)">
+        Login
+      </button>
+
+      <p class="text-center">
+        Have an account?
+        <a routerLink="/register">Register</a>
+      </p>
+    </fieldset>
+  </form>
+</div>

@@ -1,0 +1,221 @@
+/* theme content */
+
+.theme-content {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
+  padding: 1em;
+  background-color: #e4e3e3;
+  border-radius: 0.5em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* theme title */
+
+.theme-name-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em;
+  border: 1px solid #999;
+  border-radius: 0.5em;
+  font-size: 0.9em;
+  margin-top: 1em;
+  background-color: #ff9d00d7;
+  color: #234465;
+  text-shadow: 1px 1px rgb(0, 0, 0);
+}
+
+.theme-title {
+  padding: 0;
+}
+
+.theme-name {
+  width: 100%;
+  color: white;
+}
+
+.columns {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.7rem;
+}
+
+.subscribers {
+  text-align: right;
+  flex-basis: 25%;
+}
+
+.subscribers button {
+  padding: 0.3rem 0.7rem;
+  border: none;
+  border-radius: 0.5rem;
+  color: white;
+  cursor: pointer;
+  width: 100%;
+}
+
+.subscribe {
+  background-color: green;
+}
+
+.unsubscribe {
+  background-color: red;
+}
+
+.theme-name-wrapper .subscribers p {
+  text-align: right;
+}
+
+.theme-name {
+  margin-right: 1em;
+}
+
+.theme-name h2 {
+  padding-top: 0;
+}
+
+/* comment */
+
+.comment {
+  margin-top: 1em;
+  border: 1px solid #999;
+  border-radius: 0.5em;
+  width: 100%;
+  padding: 1em;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.comment header p {
+  padding: 0.5em;
+  text-align: center;
+  background-color: #234465;
+  border-bottom: 1px dashed #999;
+  color: white;
+}
+
+.comment-main {
+  margin: 1em;
+  display: flex;
+}
+
+.userdetails {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.userdetails p {
+  padding-left: 0;
+  text-align: left;
+  color: #234465;
+}
+
+.post-content p {
+  padding-left: 1.5em;
+  color: black;
+}
+
+.userdetails div {
+  border: 1px solid #999;
+  display: flex;
+  justify-content: center;
+  border-radius: 0.5em;
+  background-color: #e4e3e3;
+}
+
+.userdetails img {
+  padding: 0;
+  align-self: center;
+  margin: 1em 0;
+  width: 5em;
+  height: 5em;
+  border-radius: 50%;
+  border: 1px solid #999;
+}
+
+.footer {
+  font-size: 1.2em;
+  border-top: 1px dashed #999;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: #234465;
+  padding-top: 0.5em;
+}
+
+.footer i {
+  background-color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+
+.footer p {
+  padding-left: 0.5em;
+}
+
+.footer .fas.fa-thumbs-up {
+  color: green;
+}
+
+.footer .fas.fa-thumbs-down {
+  color: red;
+}
+
+/* answer-comment */
+
+.answer-comment {
+  width: 100%;
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+}
+
+.answer-comment p {
+  flex-basis: 15%;
+  padding-bottom: 0.3em;
+}
+
+.answer-comment p span {
+  color: #234465;
+  font-size: 1.2em;
+}
+
+.answer {
+  border: 1px solid white;
+  border-radius: 0.5em;
+  flex-basis: 85%;
+  text-align: center;
+  background-color: #e4e3e3;
+  padding: 0.5em;
+}
+
+.answer textarea {
+  width: 90%;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+  padding: 0.5em;
+  border: 1px solid #999;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.answer button {
+  background-color: #234465;
+  color: white;
+  margin: 0.5em 1em;
+  padding: 0.4em 1.2em;
+  border: none;
+  border-radius: 0.5em;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.answer button:hover {
+  transform: scale(1.05);
+}
+
+.comment-area {
+  min-width: 100%;
+}

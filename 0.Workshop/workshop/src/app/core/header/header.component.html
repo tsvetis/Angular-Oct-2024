@@ -2,32 +2,38 @@
   <div class="mini-navbar-wrap">
     <div class="logo-wrap">
       <img src="logo.png" />
-      <p class="logo">SoftUni Forum</p>
+      <p class="logo"><span class="logo">SoftUni Forum</span></p>
     </div>
-
-    @if(!isLoggedIn) {
     <div class="mini-navbar">
       <ul>
+        @if(isLoggedIn){
         <li>
-          <a href="#">Login</a>
+          <a routerLink="/profile">{{ firstName }}'s profile</a>
         </li>
         <li>
-          <a href="#">Register</a>
+          <a (click)="logout()">Logout</a>
         </li>
+        } @else {
+        <li>
+          <a routerLink="/login">Login</a>
+        </li>
+        <li>
+          <a routerLink="/register">Register</a>
+        </li>
+        }
       </ul>
     </div>
-    }
   </div>
   <nav>
     <ul>
       <li>
-        <a href="#">Home</a>
+        <a routerLink="/home">Home</a>
       </li>
       <li>
-        <a href="#">Themes</a>
+        <a routerLink="/themes">Themes</a>
       </li>
       <li>
-        <a href="#">New Theme</a>
+        <a routerLink="/add-theme">New Theme</a>
       </li>
     </ul>
   </nav>

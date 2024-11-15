@@ -1,0 +1,59 @@
+/* welcome component */
+
+.welcome {
+  padding: 0.5em 1em;
+  border: 1px solid #999;
+  border-radius: 0.5em;
+  font-size: 0.9em;
+  margin-top: 1em;
+  background-color: #e4e3e3; /* Matches body background */
+}
+
+.welcome h3 {
+  background-color: #234465;
+  color: white;
+  text-shadow: 1px 1px rgb(43, 42, 42);
+  border-radius: 0.5em;
+  width: 100%;
+  padding: 0.5em 1.2em;
+  text-align: center;
+}
+
+.welcome p {
+  padding: 1em;
+  border-bottom: 1px solid #999;
+  font-style: italic;
+  color: #333; /* Darker text for readability */
+}
+
+.welcome a {
+  color: white;
+  text-decoration: none;
+  background-color: #ff9f00;
+  border: none;
+  border-radius: 0.5em;
+  padding: 0.5em 2em;
+  margin: 1em;
+  display: inline-block;
+  text-align: center;
+  text-shadow: 1px 1px rgb(87, 86, 86);
+  transition: transform 0.3s ease;
+}
+
+.welcome a:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.welcome ul {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0;
+  margin: 1.5em 0;
+}
+
+.welcome li {
+  list-style: none;
+  font-size: 1em;
+  color: #234465;
+}

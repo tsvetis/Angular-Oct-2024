@@ -1,0 +1,111 @@
+/* new-theme */
+
+.new-theme-border {
+  border: 1px solid #999;
+  border-radius: 1em;
+  width: 80%;
+  margin: auto;
+  margin-top: 2em;
+  padding: 1.2em;
+  background-color: #e4e3e3;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.new-theme-border .input {
+  margin-bottom: 1em;
+}
+
+.header-background {
+  background-color: #234465;
+  border: 1px solid #234465;
+  padding: 1.5em;
+  padding-bottom: 0;
+  margin-bottom: 1em;
+  border-top-right-radius: 1em;
+  border-top-left-radius: 1em;
+  color: white;
+  text-shadow: 1px 1px rgb(87, 86, 86);
+  text-align: center;
+}
+
+.header-background span {
+  background-color: #ffffff;
+  color: #234465;
+  padding: 0.5em;
+  margin-top: 1em;
+  border-radius: 0.3em;
+  font-weight: bold;
+}
+
+.title,
+.new-theme-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.new-theme-content {
+  min-height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.new-theme-content textarea {
+  width: 100%;
+  padding: 0.6em;
+  margin: 0;
+  border-radius: 0.3em;
+  border: 1px solid #999;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.new-theme-content label {
+  margin-bottom: 0.3em;
+  color: #234465;
+  font-weight: bold;
+}
+
+.new-theme-title input {
+  width: 55%;
+  border-radius: 0.3em;
+  padding: 0.5em;
+  border: 1px solid #999;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button + button {
+  margin-left: 1rem;
+}
+
+.new-theme-buttons {
+  margin-top: 1em;
+  text-align: center;
+}
+
+.new-theme-buttons button {
+  padding: 0.6em 1.8em;
+  border: 1px solid #333333;
+  border-radius: 0.5em;
+  background-color: #ff9f00;
+  color: white;
+  text-shadow: 1px 1px rgb(87, 86, 86);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.new-theme-buttons button:hover {
+  transform: scale(1.05);
+}
+
+p.error {
+  text-align: left;
+  border-radius: 0.3em;
+  color: red;
+  padding-top: 0;
+  font-weight: bold;
+}
+
+.input-error {
+  border-left-color: red;
+  border-color: red;
+}

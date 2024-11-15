@@ -1,0 +1,70 @@
+<div class="container">
+  <!-- theme content  -->
+  <div class="theme-content">
+    <!-- theme-title  -->
+
+    @if(!isLoggedIn){
+    <app-home />
+    }
+    <div class="theme-title">
+      <div class="theme-name-wrapper">
+        <div class="theme-name">
+          <h2>{{ theme.themeName }}</h2>
+          <p>
+            Date: <time>{{ theme.created_at }}</time>
+          </p>
+        </div>
+        <div class="subscribers">
+          <p>
+            Subscribers: <span>{{ theme.subscribers.length || 0 }}</span>
+          </p>
+          <!-- <button class="subscribe">Subscribe</button>
+                    <button class="unsubscribe">Unsubscribe</button> -->
+        </div>
+      </div>
+    </div>
+
+    <!-- comment  -->
+
+    @for (post of theme.posts; track $index) {
+    <div class="comment">
+      <header class="header">
+        <p>
+          <span>{{ post.userId.username }}</span> posted on
+          <time>{{ post.created_at }}</time>
+        </p>
+      </header>
+      <div class="comment-main">
+        <div class="userdetails">
+          <img src="./profile.png" alt="avatar" />
+        </div>
+        <div class="post-content">
+          <p>
+            {{ post.text }}
+          </p>
+        </div>
+      </div>
+      <div class="footer">
+        <!-- <i class="fas fa-thumbs-up"></i>
+                <i class="fas fa-thumbs-down"></i> -->
+        <p>
+          <span>{{ post.likes.length || 0 }}</span> likes
+        </p>
+      </div>
+    </div>
+
+    } @if(isLoggedIn){
+    <div class="answer-comment">
+      <p>
+        <span>{{ firstName }}</span> comment:
+      </p>
+      <div class="answer">
+        <form>
+          <textarea name="postText" id="comment" cols="30" rows="10"></textarea>
+          <button>Post</button>
+        </form>
+      </div>
+    </div>
+    }
+  </div>
+</div>
