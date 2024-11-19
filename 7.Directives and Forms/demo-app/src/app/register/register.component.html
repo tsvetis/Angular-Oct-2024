@@ -1,0 +1,45 @@
+<div class="conainer">
+  <h3>Register form:</h3>
+
+  <form [formGroup]="registerForm" (ngSubmit)="handleSubmit()">
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input
+        type="text"
+        id="email"
+        name="email"
+        formControlName="email"
+        placeholder="email"
+      />
+    </div>
+
+    @if(registerForm.get('email')?.touched){
+    <div>
+      @if(registerForm.get('email')?.errors?.['required']){
+      <div style="color: red">Email is required!</div>
+      }
+      <!--  -->
+      @if(registerForm.get('email')?.errors?.['email']){
+      <div style="color: red">Email is not VALID!</div>
+      }
+    </div>
+    }
+
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        formControlName="password"
+        placeholder="password"
+      />
+    </div>
+
+    @if(registerForm.get('password')?.errors?.['maxlength']){
+    <div style="color: red">Password is more than 5 chars!</div>
+    }
+
+    <button>Register</button>
+  </form>
+</div>

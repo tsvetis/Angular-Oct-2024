@@ -1,0 +1,47 @@
+<p appHighlight>home works!</p>
+<p appHighlight>home works!</p>
+
+<hr />
+
+<div appMyRouterLink="/login">Go to Login page</div>
+<div appMyRouterLink="/register">Go to Register page</div>
+
+<!-- <div [ngStyle]="{ width: widthInPercentage, backgroundColor: 'yellow' }">
+  Lorem sajdhaskhdsakjh {{ randomPercentage }}%
+</div>
+<p [ngClass]="{ highlight: isPercetangeAbove50 }">Lorem sajdhaskhdsakjh</p> -->
+
+<hr />
+
+<div *ngIf="true">
+  <div>Simple Div 1</div>
+  <div>Simple Div 2</div>
+</div>
+
+<ng-template [ngIf]="true">
+  <div>
+    <div>Simple Div 1</div>
+    <div>Simple Div 2</div>
+  </div>
+</ng-template>
+
+<!-- <ul>
+  @for (item of [1,2,3,4]; track $index) {
+  <li>{{ item }} item</li>
+  }
+</ul>
+
+<ul>
+  <li *ngFor="let item of [1, 2, 3, 4]">{{ item }} - item</li>
+</ul> -->
+
+<hr />
+<button (click)="toggleIsShown()">Toggle Is Shown</button>
+<br />
+<!-- Custom Directive -->
+<div *appMyStructural="isShown">#1 - Testing Custom Structural Directives</div>
+
+<ng-template [appMyStructural]="isShown" let-testMe="myCustomValue">
+  <div>#2 - Testing Custom Structural Directives</div>
+  <div>let-testMe: {{ testMe }}</div>
+</ng-template>
