@@ -92,11 +92,10 @@
   background-color: #e4e3e3;
 }
 
-.red-button {
-  background-color: #d9534f;
-  color: white;
-  border-radius: 0.5em;
-  padding: 0.5em 1.5em;
+.btn-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .green-button {
@@ -104,4 +103,16 @@
   color: white;
   border-radius: 0.5em;
   padding: 0.5em 1.5em;
+  margin-left: 10px;
+}
+
+.red-button {
+  background-color: #d9534f !important;
+  color: white;
+  border-radius: 0.5em;
+  padding: 0.5em 1.5em;
+}
+
+.error {
+  color: red;
 }
