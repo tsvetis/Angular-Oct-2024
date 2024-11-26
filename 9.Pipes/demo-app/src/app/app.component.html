@@ -1,0 +1,28 @@
+<div><a routerLink="/">Home</a></div>
+<div><a routerLink="/lazy">Lazy</a></div>
+<router-outlet />
+
+<hr />
+
+<div>{{ user | json | uppercase }}</div>
+<!-- user.json().uppercase() -->
+
+<div>Reduce Fn: {{ user.grades | reduce : sum : 0 }}</div>
+
+<button (click)="addProperty()">Add Property</button>
+
+<div>Promise: {{ p | async }}</div>
+
+<div>Clock: {{ time$ | async | date : "hh:mm:ss" }}</div>
+
+<hr />
+
+<button (click)="loadUsers()">Load Users</button>
+
+<hr />
+
+@if (isLoading$ | async) {
+<div>Loading ...</div>
+} @else {
+<div>{{ user$ | async | json }}</div>
+}
