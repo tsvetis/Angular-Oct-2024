@@ -23,7 +23,10 @@ export class LoginComponent {
       return;
     }
 
-    this.userService.login();
-    this.router.navigate(['/home']);
+    const { email, password } = form.value;
+
+    this.userService.login(email, password).subscribe(() => {
+      this.router.navigate(['/themes']);
+    });
   }
 }

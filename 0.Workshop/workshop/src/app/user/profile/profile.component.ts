@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {
   FormControl,
   FormGroup,
@@ -8,6 +8,7 @@ import {
 import { emailValidator } from '../../utils/email.validator';
 import { DOMAINS } from '../../constants';
 import { ProfileDetails } from '../../types/user';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-profile',
@@ -16,26 +17,36 @@ import { ProfileDetails } from '../../types/user';
   templateUrl: './profile.component.html',
   styleUrl: './profile.component.css',
 })
-export class ProfileComponent {
+export class ProfileComponent implements OnInit {
   isEditMode: boolean = false;
 
   profileDetails: ProfileDetails = {
-    username: 'JohnDoe',
-    email: 'johndoe123@gmail.com',
-    tel: '123-123-213',
+    username: '',
+    email: '',
+    tel: '',
   };
 
   form = new FormGroup({
-    username: new FormControl(this.profileDetails.username, [
+    username: new FormControl('', [
       Validators.required,
       Validators.minLength(5),
     ]),
-    email: new FormControl(this.profileDetails.email, [
-      Validators.required,
-      emailValidator(DOMAINS),
-    ]),
-    tel: new FormControl(this.profileDetails.tel),
+    email: new FormControl('', [Validators.required, emailValidator(DOMAINS)]),
+    tel: new FormControl(''),
   });
+
+  constructor(private userService: UserService) {}
+
+  ngOnInit(): void {
+    const { username, email, tel } = this.userService.user!;
+    this.profileDetails = { username, email, tel: tel! };
+
+    this.form.setValue({
+      username,
+      email,
+      tel: tel!,
+    });
+  }
 
   toggleEditMode() {
     this.isEditMode = !this.isEditMode;
@@ -47,7 +58,12 @@ export class ProfileComponent {
     }
 
     this.profileDetails = this.form.value as ProfileDetails;
-    this.toggleEditMode();
+
+    const { username, email, tel } = this.profileDetails;
+
+    this.userService.updateProfile(username, email, tel).subscribe(() => {
+      this.toggleEditMode();
+    });
   }
 
   onCancel(event: Event) {

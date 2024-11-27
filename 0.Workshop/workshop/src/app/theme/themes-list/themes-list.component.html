@@ -8,12 +8,15 @@
       <div class="theme-name-wrapper">
         <div class="theme-name">
           <a [routerLink]="theme._id" class="normal">
-            <h2>{{ theme.themeName }}</h2>
+            <h2>{{ theme.themeName | slice : 25 }}</h2>
           </a>
           <div class="columns">
             <div>
               <p>
-                Date: <time>{{ theme.created_at }}</time>
+                Date:
+                <time>{{
+                  theme.created_at | date : "yyyy-mm-dd hh:mm:ss"
+                }}</time>
               </p>
               <div class="nick-name">
                 <p>
